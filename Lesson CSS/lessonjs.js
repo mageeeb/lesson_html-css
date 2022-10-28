@@ -38,13 +38,35 @@ for (var i =0; i< x.length ; i++){
 }
 additionneTout(2,5,8,10,25,30)
 
-/////
 
 
 
 
 //6) Créer votre propre fonction join qui portera le nom joindreValeurs. Elle doit se comporter comme la fonction du même nom liée aux arrays sauf qu'elle prendra une suite de valeurs ou de strings à la place d'un array.
 
+function joindreValeur(...x) {
+    let clim =""
+
+for (var i =0; i< x.length ; i++){
+    clim += x[i] + " ";
+    } 
+    return clim;
+}
+joindreValeur( "matin", "nuit", 'vent', "soleil", "brouillard")
+
+
+
+
 //7) Créer votre propre fonction reverse qui portera le nom renverserValeurs. Elle doitse comporter comme la fonction du même nom liée aux arrays sauf qu'elle prendra une suite de valeurs ou de strings à la place d'un array et concatenera d'abord toutes ces valeurs ensemble.
 
-//8) En vous inspirant de la fonction suivante, créer une fonction récursive qui affiche les nombres en partant d'une valeur de départ jusqu'à une valeur maximum toutes deux données lors de l'appel.
+function renverserValeurs(...x) {
+    let clim =""
+
+for (var i =0; i< x.length ; i++){
+    clim += x[i] + " ";
+    } 
+    return clim;
+}
+renverserValeurs( "matin", "nuit", 'vent', "soleil", "brouillard")
+
+//8) En vous inspirant de la fonction suivante, créer une fonction récursive qui affiche les nombres en partant d'une valeur de départ jusqu'à une valeur maximum toutes deux données lors de l'appel.    
