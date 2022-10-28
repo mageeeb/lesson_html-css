@@ -29,3 +29,5 @@ for (i = 0; i < position.length; i++){
 //5) Créer une fonction additionneTout qui prend une suite de nombres et les additionne entre eux.
 
 function additionneTout() 
+
+//retour sur cours today
