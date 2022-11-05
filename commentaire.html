@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commentaire</title>
+</head>
+<body>
+    <h1>Commentaire</h1>
+        <form action="connexion.php" method="post" name="comm1">
+            <label for="name"> <strong>Nom :</strong> </label> <input type="text" name="name" id="name" required> <br> <br>
+            <!---------------------------creer un espace pour un message------------------->
+            <label for="mess"> <strong>Message :</strong>  <br> </label> <textarea name="mess" id="mess" cols="30"
+             rows="10" placeholder="Entrer votre texte ici" maxlength= "500" rows="5" cols="60"></textarea >
+             <!---------------------------creer une liste deroulante------------------->
+             <label for="lang">Langues:</label>
+             <select name="lang" id="lang">
+                <option value="0" disabled >Choisissez une autre Langue</option>
+                <option value="0">fr</option>
+                <option value="1">ang</option>
+                <option value="2">alm</option>
+                <option value="3">nl</option>
+                <option value="4">chi</option>
+             </select>
+
+<!---------------creer les bouttons "effacer" et "envoyer" le message------------------->
+             <input type="reset" value="Effacer le contenu">
+             <input type="submit" value="Envoyer le message"> <br><br>
+<!---------------creer des cases a cocher-------------------------------->
+<label for="">Vous avez quoi comme annimaux ? :</label>
+<input type="checkbox" name=" pref[] " id="chien"><label for="chien">chien</label>
+<input type="checkbox" name=" pref[] " id="chat"><label for="chat">chat</label>
+<input type="checkbox" name=" pref[] " id=" souris"><label for="souris">souris</label>
+<input type="checkbox" name=" pref[] " id="lapin"><label for="lapin">lapin</label>
+<input type="checkbox" name=" pref[] " id="autres"><label for="autres">autres</label>
+   
+                
+        </form>
+</body>
+</html>
