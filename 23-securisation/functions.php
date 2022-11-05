@@ -11,7 +11,7 @@ function calculBasicWithInstruction(
 
     $op = "+" => string non obligatoire, possibilités : "+" , "-" , "*" , "/"
     ) 
-    retourne => chaîne de caractères (string) composée du calcul et du résultat
+    retourne => chaîne de caractères (string) composée du calcul et du résultat voila
 
 */
 function calculBasicWithInstruction($num1, $num2, $op = "+"){
