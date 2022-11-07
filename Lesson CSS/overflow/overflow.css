@@ -1,0 +1,11 @@
+main {
+    width:400px;
+    height:300px;
+    border: 2px solid black;
+    overflow: auto;
+}
+
+main p {
+    text-align: justify;
+    padding: 0 10px;
+}

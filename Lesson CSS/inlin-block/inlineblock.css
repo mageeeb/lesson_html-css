@@ -1,0 +1,41 @@
+nav ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    width: 120px;
+    border: 3px solid lightcoral;
+    border-radius: 10px;
+    margin-right: 30px;
+    text-align: center;         /* pour centrer horizontalement */
+    height:40px;
+    line-height: 40px;          /* pour centrer verticalement : la valeur de line-height doit être la même que height */
+}
+
+nav ul li a {
+    text-decoration: none;
+    display: block;         /* pour rendre cliquable tout le "bouton" et pas seulement le lien */
+    color: black;
+    font-style: italic;
+}
+
+nav ul li a:hover {     /* pour les liens survolés */
+    background-color: lightcoral;
+    color: black;
+    font-weight: bold;      /* mettre en gras */
+}
+
+main {
+    clear:left;
+    padding-top: 20px;
+}
+
+img {
+    float:left;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
