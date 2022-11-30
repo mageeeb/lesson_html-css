@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecteur Vidéo avec JS</title>
+</head>
+<body>
+    <h1>Lecteur Vidéo avec JS</h1>
+    <video id="maVideo" src="media/Wildlife.webm" width="640" height="360" poster="media/wildlife_image.png">
+    </video>
+    <table>
+        <tr>
+            <td>STOP <img src="icons/stop-button.png" width="64" onclick="console.log('Bouton STOP'); pauseVideo();"></td>  <!-- bouton Stop -->
+            <td>PLAY <img src="icons/play-button.png" width="64" onclick="console.log('Bouton PLAY'); playVideo();"></td>  <!-- bouton Play -->
+            <td>RESTART <img src="icons/undo-arrow.png" width="64" onclick="console.log('Bouton RESTART'); restartVideo();"></td>   <!-- bouton Restart -->
+        </tr>
+    </table>
+
+    <script>
+        const uneVideo = document.querySelector("#maVideo");
+
+        function playVideo() {
+            uneVideo.play();
+            console.log("Durée de la vidéo = " + uneVideo.duration + " secondes.");
+        }
+
+        function pauseVideo() {
+            uneVideo.pause();
+            console.log("La vidéo s'est écoulée depuis " + uneVideo.currentTime + " secondes.");
+        }
+
+        function restartVideo() {
+            uneVideo.load();
+            playVideo();
+        }
+    </script>
+</body>
+</html>
