@@ -1,0 +1,46 @@
+/* Choisir le conteneur Flexbox */
+.menu {
+    display: flex;  /* le parent */
+    /* axe principal = horizontal */
+    flex-direction: row;
+    /* alignement et répartition dans l'axe principal => justify-content */
+    /* ici, les éléments de menu sont poussés à droite */
+    /* l'espacement entre chacun d'eux est géré par la marge au niveau des liens */
+    justify-content: flex-end;
+    /* logo en image de fond */
+    background-image: url("../images/logo.png");
+    background-size: 58px;
+    background-repeat: no-repeat;
+}
+
+/* D'office, les enfants du conteneur deviennent des flex-items */
+/* Donc ici, les liens <a> à l'intérieur du <nav> */
+
+.menu a {
+    text-decoration: none;
+    width:100px;
+    border: 2px solid aqua;
+    border-radius: 10px;
+    text-align: center;
+    /* pour centrer verticalement le texte dans la boîte, je donne la même valeur à la hauteur de line que la hauteur de la boîte */
+    /*
+    display: block;
+    height:50px;
+    line-height: 50px;
+    */
+    /* pour centrer verticalement, et horizontalement, le texte dans la boîte, avec Flexbox */
+    display: flex;
+    height: 50px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 10px;
+}
+
+.menu a:hover {
+    background-color: aqua;
+    font-weight: bold;
+    color: whitesmoke;
+}
+

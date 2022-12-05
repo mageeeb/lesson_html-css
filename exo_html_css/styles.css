@@ -1,0 +1,81 @@
+
+.header {
+    border: 10px solid black;
+    margin: 20em;
+    display: flex;
+    margin-top: 10px;
+    ;
+}
+/*-----menu ---------*/
+#navbar{
+    position: relative;
+    left: 15em;
+}
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+        justify-content: space-between;
+        
+    
+}
+
+nav a{
+    position: relative;
+    border: 2px solid black;
+    border-radius: 10px;
+    top: 100px;
+    width: 150px;
+    text-decoration: none;
+        color: black;
+        text-align: center;
+        
+        
+       
+        
+        
+
+}
+
+#navbar img{
+    width: 100px;
+    position: relative;
+    top: 30px;
+    left: 2.5em;
+
+    
+}
+
+/*---section-------*/
+
+h1,h2{
+    text-align: center;
+}
+
+section{
+    position: relative;
+    left: 8em;
+
+}
+
+.section img{
+    width: 150px;
+    position: relative;
+    left: 10em;
+    float: left;
+    top: 120px;
+    right: 10em;
+}
+
+.para{
+    text-align: center;
+    margin: 20em;
+    position: relative;
+    bottom: 20em;
+    
+   
+
+
+    
+}
