@@ -22,6 +22,7 @@ if (isset($_GET['p'])) {
         case 'visit':
             include 'pages/votre_visite.php';
             break;
+
         default:
             include "pages/404.php";
     }
