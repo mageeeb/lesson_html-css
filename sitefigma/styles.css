@@ -40,16 +40,15 @@ color: black;
     text-decoration: none;
     font-weight: bold;
     text-transform: capitalize;
+
    
 }
-.home li a :hover{
-    background-color: #f9004d;
+ul li a:hover{
+    background-color: yellow;
         color: black;
         text-decoration: none;
-        border: 2px solid black;
         font-weight: bold;
         padding: 10px 25px;
-        border-radius: 30px;
         transition: transform 0.4s;
     }
     .text{
@@ -81,15 +80,68 @@ color: black;
     top: 100px;
    }
 
-   .footer{
-    background-color: black;
-    position: relative;
-    top: 150px;
-    text-align: center;
-    
+   
+
+   /*--------------programmes-------*/
+
+   .prog{
+    padding-top: 40px;
    }
-   .footer p{
-        color: white;
-        
+   .prog0{
+    display: flex;
+    position: relative;
+        bottom: 20px;
    }
   
+   .prog1{
+    display: flex;
+    position: relative;
+    
+   }
+
+   .prog2 {
+       display: flex;
+       position: relative;
+       top: 30px;
+   }
+
+   .prog3 {
+       display: flex;
+       position: relative;
+       top: 60px;
+   }
+
+     .prog4 {
+            display: flex;
+            position: relative;
+            top: 90px;
+        }
+  .progg1{
+    position: relative;
+    left: 50px;
+    bottom: 20px;
+  }
+
+  /*-------------studio bronks----*/
+  .studio{
+    display: flex;
+  }
+
+  .studiotext{
+    position: relative;
+    left: 30px;
+  }
+
+  /*-----------------Footer-------------------*/
+  .footer {
+      background-color: black;
+      position: relative;
+      top: 150px;
+      text-align: center;
+
+  }
+
+  .footer p {
+      color: white;
+
+  }

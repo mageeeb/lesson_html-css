@@ -21,11 +21,11 @@
         ?>
         <div class="studio">
             <div class="studioimg">
-                <img src="/images/photos home/Rectangle 23.png" alt="img">
+                <img src="/images/photos home/Rectangle 27.png" alt="img">
             </div>
 
             <div class="studiotext">
-                <h1>L’ECOLE</h1>
+                <h1>COME ON FEET</h1>
                 <p>Lorem ipsum dolor sit amet consectetur. Vitae elementum arcu magna mattis amet est elit nunc arcu. Fusce scelerisque scelerisque volutpat facilisis sagittis aenean et feugiat. Malesuada commodo risus donec feugiat ac est. Mi vulputate viverra sagittis orci laoreet quisque. Malesuada proin mi elit ut faucibus facilisi. Purus nulla lectus metus tellus habitant porta elementum aliquam fusce. Risus orci magna aliquam tincidunt scelerisque euismod quam urna. Elementum </p>
 
                 <p>nascetur dignissim vitae ac pulvinar. Senectus aliquam sed enim sed. Leo fermentum enim duis vitae nunc vitae laoreet vulputate mauris. Velit sit porttitor tristique dictum. Eget egestas purus in donec euismod integer urna. Adipiscing bibendum consequat risus adipiscing nunc tortor. Amet faucibus neque lectus id nunc pretium.
@@ -40,4 +40,5 @@
         include "footer.php"
         ?>
     </header>
+
 </html>
