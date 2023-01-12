@@ -1,0 +1,46 @@
+body {
+    background-color: bisque;
+}
+
+#element {
+    width: 300px;
+    height:300px;
+    background-color: aqua;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 300px;
+    border: 3px solid black;
+    border-radius: 20px;
+
+    /* transition quand on passe de l'état survolé à l'état de base */
+    /*
+    transition-duration: 1s;
+    transition-delay: 0s;
+    transition-property: border-radius;
+    */
+    /*transition: border-radius 1s ease 0s;*/
+
+    transition: border-radius 2s linear 1s, background-color 2s linear 1s;
+}
+
+#element p {
+    margin: 0;
+    padding: 0;
+}
+
+#element:hover {
+    border-radius: 50%;
+    background-color: blueviolet;
+    /*width:500px;*/
+
+    /* transition quand on passe de l'état de base à l'état survolé */
+    /* durée totale */
+    transition-duration: 2s;
+    /* délai avant que ça démarre */
+    transition-delay: 1s;
+    /* quelles propriétés sont affectées */
+    transition-property: border-radius, background-color;
+    /* vitesse, accélération, ralentissement de la transition */
+    transition-timing-function: linear;
+}
