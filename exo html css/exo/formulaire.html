@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Formulaires</title>
+</head>
+<body>
+    <h1>Formulaires</h1>
+<!-- attribut method => Méthode GET : les infos sont inscrites dans l'URL
+         attribut action => si vide, la page est envoyée à elle-même
+         attribut name => pour identifier le formulaire
+    -->
+<form method="GET" action="" name="form1">
+    <!-- Champ de texte avec son label 
+            (le "for" du label doit avoir la même valeur que l'"id" de l'élément de formulaire) 
+            le placeholder affiche un texte provisoire dans l'élément
+            l'attribut required indique que le champ est obligatoire
+        -->
+    <label for="nom">Nom : </label><input type="text" name="nom" id="nom" placeholder="Entrez ici votre nom" required>
+    <br> <br>
+    <label for="prenom">Prénom : </label><input type="text" name="prenom" id="prenom">
+    <br>
+    <label>Titre : </label>
+    <!-- Groupe de radio-boutons : ils doivent avoir le même "name" pour être dans le même groupe
+        Si un est coché, les autres sont décochés
+        Pour déterminer celui coché à l'affichage, on ajoute l'attribut "checked"
+        -->
+    <input type="radio" name="titre" id="M" checked><label for="M">Monsieur</label>
+    <input type="radio" name="titre" id="Mme"><label for="Mme">Madame</label>
+    <br> <br>
+    <!-- Champ de type Date -->
+    <label for="birthdate">Date de naissance</label><input type="date" name="date" id="birthdate">
+    <br> <br> 
+    <!-- Champ de type Email -->
+    <label for="courriel">E-mail : </label><input type="email" name="email" id="courriel">
+    <br> <br> 
+    <!-- Champ de type Mot de passe -->
+    <label for="mdp">Mot de passe : </label><input type="password" name="mdp" id="mdp">
+    <br>
+    <!-- Bouton d'envoi -->
+    <input type="submit" value="Envoyer"> <br> <br>
+        <label for="message">Message :</label><textarea name="message" id="message" cols="30" rows="5"></textarea> <input type="submit" value="Envoyer">
+        
+        
+
+    </form>
+</body>
+</html>
