@@ -10,7 +10,71 @@
 </head>
 
 <body>
-        
+    <div class="clock">
+        <div class="digit">
+            <div style="--ga: r1c2"></div>
+            <div style="--ga: r2c1"></div>
+            <div style="--ga: r2c3"></div>
+            <div style="--ga: r3c2"></div>
+            <div style="--ga: r4c1"></div>
+            <div style="--ga: r4c3"></div>
+            <div style="--ga: r5c2"></div>
+        </div>
+        <div class="digit">
+            <div style="--ga: r1c2"></div>
+            <div style="--ga: r2c1"></div>
+            <div style="--ga: r2c3"></div>
+            <div style="--ga: r3c2"></div>
+            <div style="--ga: r4c1"></div>
+            <div style="--ga: r4c3"></div>
+            <div style="--ga: r5c2"></div>
+        </div>
+        <div class="colon"></div>
+        <div class="digit">
+            <div style="--ga: r1c2"></div>
+            <div style="--ga: r2c1"></div>
+            <div style="--ga: r2c3"></div>
+            <div style="--ga: r3c2"></div>
+            <div style="--ga: r4c1"></div>
+            <div style="--ga: r4c3"></div>
+            <div style="--ga: r5c2"></div>
+        </div>
+        <div class="digit">
+            <div style="--ga: r1c2"></div>
+            <div style="--ga: r2c1"></div>
+            <div style="--ga: r2c3"></div>
+            <div style="--ga: r3c2"></div>
+            <div style="--ga: r4c1"></div>
+            <div style="--ga: r4c3"></div>
+            <div style="--ga: r5c2"></div>
+        </div>
+        <div class="colon"></div>
+        <div class="digit">
+            <div style="--ga: r1c2"></div>
+            <div style="--ga: r2c1"></div>
+            <div style="--ga: r2c3"></div>
+            <div style="--ga: r3c2"></div>
+            <div style="--ga: r4c1"></div>
+            <div style="--ga: r4c3"></div>
+            <div style="--ga: r5c2"></div>
+        </div>
+        <div class="digit">
+            <div style="--ga: r1c2"></div>
+            <div style="--ga: r2c1"></div>
+            <div style="--ga: r2c3"></div>
+            <div style="--ga: r3c2"></div>
+            <div style="--ga: r4c1"></div>
+            <div style="--ga: r4c3"></div>
+            <div style="--ga: r5c2"></div>
+        </div>
+    </div>
+
+<script src="/index.js"></script>
+
+
+
+
+
 </body>
 
 </html>

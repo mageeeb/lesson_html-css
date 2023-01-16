@@ -74,9 +74,9 @@
                     </div>
                 </div>
                 <div class="logo">
-                    <img src="/images/logos partenaires/vlaanderen-logo.jpg" alt="">
-                    <img src="/images/logos partenaires/logo_vbx.png" alt="">
-                    <img src="/images/logos partenaires/bruzz_logo.png" alt="">
+                    <a href="https://www.vlaanderen.be/"> <img src="/images/logos partenaires/vlaanderen-logo.jpg" alt=""></a>
+                    <a href="https://www.mybxl.be/fr-BE"> <img src="/images/logos partenaires/logo_vbx.png" alt=""></a>
+                    <a href="https://www.bruzz.be/"> <img src="/images/logos partenaires/bruzz_logo.png" alt=""></a>
                 </div>
 
 
