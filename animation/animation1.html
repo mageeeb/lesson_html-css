@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations avec CSS</title>
+    <link rel="stylesheet" href="animation1.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="images/html5.png" alt="Logo HTML5">
+    </header>
+    <main>
+        <h1>Les Animations avec CSS3</h1>
+        <section class="objet">
+            <h3>CSS3</h3>
+            <p>Animation</p>
+        </section>
+        <br>
+        <button onclick="anime();">Animer le titre</button>
+    </main>
+
+    <script>
+        var leTitre = document.querySelector("main h1");
+
+        leTitre.addEventListener("animationstart", demarre, false);
+        leTitre.addEventListener("animationend", fini, false);
+        leTitre.addEventListener("animationiteration", compte, false);
+
+        function anime() {
+            console.log("Animation CSS");
+            leTitre.style.animationName = "deplaceTitre";
+            /* on donne une valeur à la propriété CSS animation-name pour démarrer l'animation */
+        }
+
+        function demarre(e) {
+            var monAnimation = e.animationName;
+            console.log("Animation "+monAnimation+" démarre" );
+        }
+
+        function fini() {
+            console.log("Animation terminée");
+            leTitre.style.animationName = "";
+            /* on retire la valeur de la propriété CSS animation-name pour annuler l'animation */
+        }
+
+        function compte() {
+            console.log("l'animation recommence");
+        }
+    </script>
+</body>
+</html>
