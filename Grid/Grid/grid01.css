@@ -1,0 +1,83 @@
+#global {
+    display:grid;   
+    /* pour définir le conteneur principal (parent) 
+     affiché comme un élément de type block */
+    grid-template-columns: 200px 70% auto;
+     /* 3 valeurs donc 3 colonnes */
+     /* 1: largeur fixe de 200px */
+     /* 2: largeur variable de 70% de la largeur de l'écran */
+     /* 3: valeur automatiquement calculée - espace restant */
+     grid-template-rows: [au-dessus] 200px [bas-du-header] auto 200px;
+}   
+
+header {
+    background-color: aqua;
+    /* démarre à la ligne de rangée 1 */
+    /* se termine à la ligne de rangée 2 */
+    /*
+    grid-row-start: 1;
+    grid-row-end: 2;
+    */
+    grid-row: 1 / 2;    /* notation raccourcie */
+
+    /* autre approche avec le nom des lignes */
+    /*grid-row: au-dessus / bas-de-header;*/
+
+    /* démarre à la ligne de colonne 1 */
+    /* se termine à la ligne de colonne 4 */
+    /*
+    grid-column-start: 1;
+    grid-column-end: 4;
+    */
+    grid-column: 1 / 4; /* notation raccourcie */
+}
+
+nav {
+    background-color:burlywood;
+    /* rangée 2 à 3 ; colonne 1 à 2 */
+    /*
+    grid-row-start: 2;
+    grid-row-end: 3;
+    */
+    grid-row: 2;    /* encore plus raccourci car les lignes se suivent */
+    /*
+    grid-column-start: 1;
+    grid-column-end: 2;
+    */
+    grid-column: 1; /* encore plus raccourci car les lignes se suivent */
+}
+
+main {
+    background-color:coral;
+    /* rangée 2 à 3 ; colonne 2 à 3 */
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+aside {
+    background-color: cornflowerblue;
+    /* rangée 2 à 3 ; colonne 3 à 4 */
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+footer {
+    background-color: black;
+    color:white;
+    /* rangée 3 à 4 ; colonne 1 à 4 */
+    /*
+    grid-row-start: 3;
+    grid-row-end: 4;
+    */
+    grid-row: 3;
+    /*
+    grid-column-start: 1;
+    grid-column-end: 4;
+    */
+    grid-column: 1 / span 3;    
+    /* équivalent à grid-column: 1 / 4 */
+}

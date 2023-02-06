@@ -1,0 +1,36 @@
+#photos {
+    position: relative;
+    width:360px;
+    height:360px;
+    overflow: hidden;
+}
+
+#slideshow li {
+    display: inline;
+}
+
+#slideshow {
+    position: absolute;
+    top:0;
+    left:0px;
+    width: 1800px;  /* 5 photos de 360px = 5x360 = 1800 */
+    margin: 0;
+    padding:0;
+
+    animation-name: slider;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes slider {
+    0.0% { left: 0px; }
+   12.5% { left: 0px; } 
+   25.0% { left: -360px; }
+   37.5% { left: -360px; }
+   50.0% { left: -720px; }
+   62.5% { left: -720px; }
+   75.0% { left: -1080px; }
+   87.5% { left: -1080px; }
+  100.0% { left: -1440px; } 
+}

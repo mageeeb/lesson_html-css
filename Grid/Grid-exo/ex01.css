@@ -1,0 +1,27 @@
+body {
+    margin: 20px;
+}
+
+.conteneur {
+    width: 540px;
+    height: 400px;
+    background-color: powderblue;
+    color: #444;
+	
+	/* Définition de la grille */
+	display: grid;
+    grid-template-columns: 150px 150px 150px;
+    
+    row-gap: 10px;
+    column-gap: 10px;
+	
+}
+
+.boite {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 120%;
+}
+
