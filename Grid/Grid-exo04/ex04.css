@@ -1,0 +1,32 @@
+body {
+    margin: 20px;
+}
+
+.conteneur {
+    width: 540px;
+    height: 400px;
+    background-color: powderblue;
+    color: #444;
+    gap: 10px;
+    /*  grid-template-columns :2fr 4fr 2fr 4fr 2fr 4fr;*/
+      display: grid;
+  /*aussi en repeat*/
+ /*grid-template-rows :80px 1fr 1fr ;*/
+  grid-template-columns: 1fr 1fr;
+  /*on peut mettre aussi*/
+  grid-template-rows :80px auto ;
+  
+
+}
+
+.boite {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 120%;
+}
+
+.c2 {
+    display: none;
+}

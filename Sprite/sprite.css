@@ -1,0 +1,54 @@
+#jongleur { /* 11 images de 200px de large */
+    width:200px;
+    overflow: hidden;
+}
+
+#jongleur img {
+    position: relative;
+
+    animation-name: jongleur;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(11);
+}
+
+@keyframes jongleur {
+    from { left:0; }
+    to {left: -2200px; }    /* 11x200=2200 */
+}
+
+#oiseau { /* 14 images de 183px */
+    width: 183px;
+    overflow: hidden;
+}
+
+#oiseau img {
+    position: relative;
+    animation: vol 2s infinite steps(14);
+}
+
+@keyframes vol {
+    from { left: 0; }
+    to { left: -2562px; }   /* 14x183=2562 */
+}
+
+#course { /* 8 images de 128px */
+    width: 128px;
+    overflow: hidden;
+    animation: avance 4s infinite linear;
+}
+
+#course img {
+    position: relative;
+    animation: coureur 1s infinite steps(8);
+}
+
+@keyframes coureur {
+    from { left: 0; }
+    to { left: -1024px; }
+}
+
+@keyframes avance {
+    from { transform: translateX(-200px);}
+    to { transform: translateX(1900px);}
+}
