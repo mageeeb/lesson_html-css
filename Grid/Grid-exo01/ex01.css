@@ -1,0 +1,29 @@
+body {
+    margin: 20px;
+}
+
+.conteneur {
+    width: 540px;
+    height: 400px;
+    background-color: powderblue;
+    color: #444;
+	
+	/* Définition de la grille */
+	display: grid;
+    /*grid-template-columns: 150px 150px 150px;*/
+    /*on peut aussi mettre le "repeat"*/
+   /* grid-template-columns:repeat(3, 150px);*/
+    gap: 10px;
+    /*on peut aussi utilisé les "fr" pour prendre toute la page*/
+    grid-template-columns:repeat(3, 1fr);
+	
+}
+
+.boite {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 120%;
+}
+

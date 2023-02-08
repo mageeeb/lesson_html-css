@@ -3,18 +3,15 @@ body {
 }
 
 .conteneur {
-    width: 540px;
-    height: 400px;
+    width: 800px;
+    height: 300px;
     background-color: powderblue;
     color: #444;
-	
-	/* Définition de la grille */
-	display: grid;
-    grid-template-columns: 150px 150px 150px;
-    
-    row-gap: 10px;
-    column-gap: 10px;
-	
+      gap: 10px;
+  /*  grid-template-columns :2fr 4fr 2fr 4fr 2fr 4fr;*/
+    display: grid;
+/*aussi en repeat*/
+grid-template-columns:repeat(3, 2fr 4fr);
 }
 
 .boite {
