@@ -1,0 +1,108 @@
+body {
+    margin:0;
+    padding:0;
+
+    /* pour centrer la grille globale */
+    /* avec Flexbox */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#global {
+    width: 90vw;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 150px auto 100px;
+    grid-template-areas:
+        "logo    menu    menu"
+        "contenu contenu contenu"
+        "social  footer  top";
+
+    /* Dans Grid, tous les items sont centrés verticalement */
+    /* comme justify-content n'est pas défini, il prend la valeur par défaut = stretch */
+    align-items: center;
+}
+
+#logo {
+    grid-area: logo;
+
+    /* Dans Grid, pour centrer horizontalement le logo */
+    /* par défaut, le logo était en position start */
+    justify-self: center;
+}
+
+#menu {
+    grid-area: menu;
+
+    /* Positionnement Flex */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#menu a {
+    display: block;
+    width:200px;
+    height:50px;
+    border: 3px solid blue;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    line-height: 50px;
+    color:blue;
+}
+
+#menu a:hover {
+    background-color: blue;
+    color: white;
+}
+
+#contenu {
+    grid-area: contenu;
+
+    /* Par défaut, le contenu était centré verticalement, à cause du "align-items:center" défini dans le #global */
+    /* Or, on le veut plus haut, donc, pour faire remonter le contenu */
+    align-self: start;
+}
+
+#contenu img {
+    float:left;
+    width:50%;
+    height:auto;
+    margin-right: 1em;
+}
+
+#contenu p {
+    text-align: justify;
+}
+
+#social {
+    grid-area: social;
+
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#pieddepage {
+    grid-area: footer;
+}
+
+#pieddepage p {
+    text-align: center;
+}
+
+#boutontop {
+    grid-area: top;
+
+    /* Par défaut, cet élément était à gauche */
+    /* Pour le mettre à droite (à la fin) */
+    justify-self: right;
+}

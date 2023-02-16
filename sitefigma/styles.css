@@ -5,7 +5,7 @@
     margin-top: 26px;
     min-height: 467px;
     width: 1329px;
-   left: 20em;
+ 
    background-color: white;
 }
 .div img{
@@ -45,15 +45,15 @@ color: black;
    
 }
 ul li a:hover{
-    background-color: yellow;
-        color: black;
-        text-decoration: none;
-        font-weight: bold;
-        padding: 10px 25px;
-        transition: transform 0.4s;
-        transform: translateZ(-800px) rotateX(90deg);
-            opacity: 0;
-    }
+	background-color:yellow;
+	color: black;
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 10px 25px;
+	border-radius: 30px;
+	transition: transform .4s;
+}
     .text{
         background-color: yellow;
         text-align: center;
@@ -79,7 +79,7 @@ ul li a:hover{
     left: 30em;
     justify-content: space-between;
     display: flex;
-    width: 400px;
+   width: 400px;
     top: 100px;
    }
 
@@ -136,6 +136,10 @@ ul li a:hover{
   }
 
   /*-----------------Footer-------------------*/
+ .logo{
+
+ }
+  
   .footer {
       background-color: black;
       position: relative;
