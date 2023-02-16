@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="./styles.css">
     <title>Site de Figma</title>
 </head>
 
@@ -13,7 +13,7 @@
 
     <header class="header">
         <div class="div">
-            <a href="/index.php"> <img src="/images/logo Bronks.png" alt="logo"></a>
+            <a href="./index.php"> <img src="./images/logo Bronks.png" alt="logo"></a>
         </div>
 
         <?php
@@ -21,7 +21,7 @@
         ?>
         <div class="studio">
             <div class="studioimg">
-                <img src="/images/photos programme/Rectangle 30.png" alt="img">
+                <img src="./images/photos programme/Rectangle 30.png" alt="img">
             </div>
 
             <div class="studiotext">
