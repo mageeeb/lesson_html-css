@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Géolocalisation - Ma position</title>
+</head>
+<body>
+    <h1>Géolocalisation - Ma position</h1>
+    <button onclick="recherchePositionComplete();">Rechercher ma position complète</button>
+    <h2>Mes coordonnées</h2>
+    <p id="message"></p>
+    <p id="long"></p>
+    <p id="lat"></p>
+    <p id="alti"></p>
+
+    <p id="precision"></p>
+    <p id="precision_alti"></p>
+    <p id="dateheure"></p>
+    <p id="direction"></p>
+    <p id="vitesse"></p>
+
+    <script>
+        initMessages();
+
+        function initMessages() {
+            document.getElementById("message").innerHTML = "";
+            document.getElementById("lat").innerHTML = "";
+            document.getElementById("long").innerHTML = "";
+            document.getElementById("alti").innerHTML = "";
+
+            document.getElementById("precision").innerHTML = "";
+            document.getElementById("precision_alti").innerHTML = "";
+            document.getElementById("dateheure").innerHTML = "";
+            document.getElementById("direction").innerHTML = "";
+            document.getElementById("vitesse").innerHTML = "";
+        }
+
+        function recherchePosition(){
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(positionTrouvee,erreurPosition);
+            } else {
+                document.getElementById('message').innerHTML = "Désolé, votre navigateur ne supporte pas la géolocalisation !";
+            }
+        }
+
+        function recherchePositionComplete(){
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(positionTrouveeComplete,erreurPosition,{
+                    enableHighAccuracy:true, timeout:10000, maximumAge:1000});
+            } else {
+                document.getElementById('message').innerHTML = "Désolé, votre navigateur ne supporte pas la géolocalisation !";
+            }
+        }
+
+        function positionTrouveeComplete(position) {
+            document.getElementById("message").innerHTML = "Voici votre position :";
+            document.getElementById("lat").innerHTML = "Latitude = " + position.coords.latitude + " °";
+            document.getElementById("long").innerHTML = "Longitude = " + position.coords.longitude + " °";
+            document.getElementById("alti").innerHTML = "Altitude = " + position.coords.altitude + " m";
+
+            // Paramètres récupérés après définition des options
+            document.getElementById("precision").innerHTML = "Précision = " + position.coords.accuracy + " m";
+            document.getElementById("precision_alti").innerHTML = "PrécisionAltitude = " + position.coords.altitudeAccuracy + " m";
+            document.getElementById("dateheure").innerHTML = "Date et heure = " + Date(position.time);
+            document.getElementById("direction").innerHTML = "Direction = " + position.coords.heading + " °";
+            document.getElementById("vitesse").innerHTML = "Vitesse = " + position.coords.speed + " m/s";
+        }
+
+        function erreurPosition(erreur) {
+            let typeErreur;
+
+            switch(erreur.code) {
+                case erreur.PERMISSION_DENIED: typeErreur="PERMISSION_DENIED"; alert("PERMISSION_DENIED : l'utilisateur n'a pas autorisé l'accès à sa position."); break;
+                case erreur.POSITION_UNAVAILABLE: typeErreur="POSITION_UNAVAILABLE"; alert("POSITION_UNAVAILABLE : la position n'a pas pu être déterminée."); break;
+                case erreur.TIMEOUT: typeErreur="TIMEOUT"; alert("TIMEOUT : le service n'a pas répondu à temps."); break;
+                case erreur.UNKNOWN_ERROR: typeErreur="UNKNOWN_ERROR"; alert("UNKNOWN_ERROR : une erreur inconnue s'est produite");
+            }
+
+            document.getElementById("message").innerHTML = "Une erreur s'est produite ("+ typeErreur + "), la position ne peut pas être déterminée.";
+            document.getElementById("lat").innerHTML = "";
+            document.getElementById("long").innerHTML = "";
+            document.getElementById("alti").innerHTML = "";
+        }
+
+
+    </script>
+</body>
+</html>

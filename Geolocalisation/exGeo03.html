@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Géolocalisation - Ma position</title>
+</head>
+<body>
+    <h1>Géolocalisation - Ma position</h1>
+    <button onclick="recherchePosition();">Rechercher ma position</button>
+    <h2>Mes coordonnées</h2>
+    <p id="message"></p>
+    <p id="long"></p>
+    <p id="lat"></p>
+    <p id="alti"></p>
+
+    <script>
+        initMessages();
+
+        function initMessages() {
+            document.getElementById("message").innerHTML = "";
+            document.getElementById("lat").innerHTML = "";
+            document.getElementById("long").innerHTML = "";
+            document.getElementById("alti").innerHTML = "";
+        }
+
+        function recherchePosition(){
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(positionTrouvee,erreurPosition);
+            } else {
+                document.getElementById('message').innerHTML = "Désolé, votre navigateur ne supporte pas la géolocalisation !";
+            }
+        }
+
+        function positionTrouvee(position) {
+            document.getElementById("message").innerHTML = "Voici votre position :";
+            document.getElementById("lat").innerHTML = "Latitude = " + position.coords.latitude + " °";
+            document.getElementById("long").innerHTML = "Longitude = " + position.coords.longitude + " °";
+            document.getElementById("alti").innerHTML = "Altitude = " + position.coords.altitude + " m";
+        }
+
+        function erreurPosition(erreur) {
+            let typeErreur;
+
+            switch(erreur.code) {
+                case erreur.PERMISSION_DENIED: typeErreur="PERMISSION_DENIED"; alert("PERMISSION_DENIED : l'utilisateur n'a pas autorisé l'accès à sa position."); break;
+                case erreur.POSITION_UNAVAILABLE: typeErreur="POSITION_UNAVAILABLE"; alert("POSITION_UNAVAILABLE : la position n'a pas pu être déterminée."); break;
+                case erreur.TIMEOUT: typeErreur="TIMEOUT"; alert("TIMEOUT : le service n'a pas répondu à temps."); break;
+                case erreur.UNKNOWN_ERROR: typeErreur="UNKNOWN_ERROR"; alert("UNKNOWN_ERROR : une erreur inconnue s'est produite");
+            }
+
+            document.getElementById("message").innerHTML = "Une erreur s'est produite ("+ typeErreur + "), la position ne peut pas être déterminée.";
+            document.getElementById("lat").innerHTML = "";
+            document.getElementById("long").innerHTML = "";
+            document.getElementById("alti").innerHTML = "";
+        }
+
+
+    </script>
+</body>
+</html>
