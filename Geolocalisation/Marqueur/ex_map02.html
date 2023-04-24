@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Ajouter la CSS Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+
+    <!-- Ajouter les liens pour les markerClusters -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
+
+    <!-- Style pour l'affichage de la page -->
+    <link rel="stylesheet" href="bigben.css">
+</head>
+<body>
+    <h1>Big Ben - Londres</h1>
+    <main>
+        <!-- Carte -->
+        <div id="ma_carte"></div>
+        <!-- Photo -->
+        <img id="photo" src="Clock_Tower_-_Palace_of_Westminster,_London_-_September_2006.jpg">
+        <!-- Texte de présentation -->
+        <article class="texte">
+        <p>Big Ben est le surnom de la grande cloche de 13,5 tonnes se trouvant au sommet de la tour Élisabeth (Elizabeth Tower), la tour horloge du palais de Westminster, qui est le siège du Parlement britannique (Houses of Parliament), à Londres. La tour a été renommée à l'occasion du jubilé de diamant d'Élisabeth II en 2012. Auparavant, elle était simplement appelée tour de l'Horloge (Clock Tower). Par métonymie, le nom de la cloche est aussi communément employé pour désigner l'horloge dans son ensemble et la tour qui abrite le tout. Il s'agit d'un symbole de la ville de Londres.</p>
+        <p>Seules les personnes qui habitent au Royaume-Uni peuvent visiter la tour de l'horloge, après avoir obtenu une autorisation.</p>
+        <p>Le bâtiment fait face à la Tamise, entre le pont de Westminster (Westminster Bridge) et l'abbaye de Westminster (Westminster Abbey).</p>
+        </article>
+    </main>
+    <!-- Ajouter le JS Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
+    <!-- Lien vers le JS pour les markerClusters -->
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+
+    <!-- Ajouter le script pour gérer la carte -->
+    <script src="bigben.js"></script>
+</body>
+</html>
